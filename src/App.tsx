@@ -1,6 +1,3 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import Index from './components/Index';
 import Meteors from './components/ui/meteors';
@@ -12,7 +9,6 @@ import Contactme from './components/Contactme';
 import { Customdock } from './components/Customdock';
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <main className="flex min-h-screen flex-col md:gap-12 gap-8 md:p-24 p-10 relative overflow-hidden lg:w-8/12 sm:w-full mx-auto">
@@ -24,7 +20,7 @@ function App() {
         <Skills />
         <Projects />
         <Contactme />
-        <Customdock orientation='vertical'/>
+        <Customdock/>
     </main>
   )
 }

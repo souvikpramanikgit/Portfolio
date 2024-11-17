@@ -1,4 +1,6 @@
-import React from 'react'
+declare const FlowbiteInstances: {
+    getInstance: (type: string, target: string) => any;
+};
 
 const Clipboard = () => {
     window.addEventListener('load', function () {
@@ -7,24 +9,29 @@ const Clipboard = () => {
         const $defaultMessage = document.getElementById('default-message');
         const $successMessage = document.getElementById('success-message');
 
-        clipboard.updateOnCopyCallback((clipboard) => {
-            showSuccess();
+        if ($defaultMessage && $successMessage) {
+            const showSuccess = () => {
+                $defaultMessage.classList.add('hidden');
+                $successMessage.classList.remove('hidden');
+            };
 
-            // reset to default state
-            setTimeout(() => {
-                resetToDefault();
-            }, 2000);
-        })
+            const resetToDefault = () => {
+                $defaultMessage.classList.remove('hidden');
+                $successMessage.classList.add('hidden');
+            };
 
-        const showSuccess = () => {
-            $defaultMessage.classList.add('hidden');
-            $successMessage.classList.remove('hidden');
+            clipboard.updateOnCopyCallback(() => {
+                showSuccess();
+
+                // reset to default state
+                setTimeout(() => {
+                    resetToDefault();
+                }, 1000);
+            });
+        } else {
+            console.error("Required DOM elements are missing.");
         }
 
-        const resetToDefault = () => {
-            $defaultMessage.classList.remove('hidden');
-            $successMessage.classList.add('hidden');
-        }
     })
     return (
         <div className="w-full max-w-[16rem]">

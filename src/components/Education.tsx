@@ -1,5 +1,3 @@
-import React from 'react'
-
 interface EducationItem {
     startDate: string;
     endDate?: string;

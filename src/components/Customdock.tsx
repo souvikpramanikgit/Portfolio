@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { CalendarIcon, HomeIcon, MailIcon, Moon, PencilIcon, Sun } from "lucide-react";
+// import { CalendarIcon, HomeIcon, MailIcon, Moon, PencilIcon, Sun } from "lucide-react";
+import { CalendarIcon, HomeIcon, MailIcon, Moon, Sun } from "lucide-react";
 
 import { cn } from ".././lib/utils";
 import { buttonVariants } from "./ui/button";
@@ -86,11 +87,8 @@ const DATA = {
     },
 };
 
-export function Customdock({
-    orientation,
-}: {
-    orientation: "vertical" | "horizontal";
-}) {
+export function Customdock() {
+
     const { resolvedTheme, setTheme } = useTheme();
     const [isMobile, setIsMobile] = useState(true);
 

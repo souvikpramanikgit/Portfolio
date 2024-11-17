@@ -1,4 +1,3 @@
-import React from 'react'
 interface WorkExperienceItem {
     startDate: string;
     endDate?: string;
