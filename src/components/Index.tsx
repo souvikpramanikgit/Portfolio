@@ -7,9 +7,7 @@ const Intro = () => {
             <div className="flex flex-col gap-2 w-full lg:w-4/5">
                 <h1 className="text-4xl font-bold mb-4">Hi! I&apos;m Souvik.</h1>
                 <p className="text-base text-gray-800 dark:text-gray-300 mb-4">
-                    I excel in building applications from scratch to production-ready. My expertise
-                    spans across frontend, backend, and full-stack development, with a
-                    knack for system design and scalability.
+                I am skilled in developing efficient, scalable applications, focusing on clean design and robust functionality.My approach emphasizes collaboration, version control, and continuous improvement to meet evolving project needs.
                 </p>
                 <Clipboard />
             </div>

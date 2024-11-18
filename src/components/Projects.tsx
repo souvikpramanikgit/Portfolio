@@ -1,27 +1,28 @@
 import { Button } from './ui/button';
 
 const projectsData = [
+  {
+    title: "NewsHive",
+    description:
+      "NewsHive is a platform that allows users to browse the latest headlines.",
+    link: "https://github.com/souvikpramanikgit/News_web",
+    code: "https://github.com/souvikpramanikgit/News_web",
+    previewVideo: "/Videos/Newsweb.mp4",
+    technologies: [
+      "React",
+      "CSS",
+      "NewsApi",
+    ],
+  },
+
     {
       title: "ColorPick Extension",
       description:
         "ColorPick Extension is a tool that allows users to select and copy color codes effortlessly.",
       link: "https://github.com/souvikpramanikgit/ColorPick",
       code: "https://github.com/souvikpramanikgit/ColorPick",
-      previewVideo: "/videos/EmojiGitPreview.mp4",
+      previewVideo: "/Videos/ColorPick.mp4",
       technologies: ["JavaScript", "Node.js", "Git"],
-    },
-    {
-      title: "NewsHive",
-      description:
-        "NewsHive is a platform that allows users to browse the latest headlines.",
-      link: "https://github.com/souvikpramanikgit/News_web",
-      code: "https://github.com/souvikpramanikgit/News_web",
-      previewVideo: "/Videos/Newsweb.mp4",
-      technologies: [
-        "React",
-        "CSS",
-        "NewsApi",
-      ],
     },
     // {
     //   title: "CloudSpace",
